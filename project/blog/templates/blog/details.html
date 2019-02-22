@@ -1,0 +1,23 @@
+{%extends "blog/layout.html"%}
+{% load staticfiles %}
+
+<html>
+    <head>
+        {%block title%}
+            {{detail.title}}
+        {%endblock%}
+    </head>
+    <body>
+        {%block content%}
+        <div class="container">
+                <div class="card">
+                   <div class="card-body">
+                     <p class="card-text">{{detail.body}}</p>
+                   </div>
+                 </div>
+               </div>
+            
+        {%endblock%}
+
+    </body>
+</html>

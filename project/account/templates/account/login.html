@@ -1,0 +1,17 @@
+{%extends 'blog/layout.html'%}
+{% load staticfiles %}
+{%block title%}Login{%endblock%}
+{%block content%}
+<div class="container">
+    <h1>login</h1>
+    <form class="loginbox" method = "POST" action="{%url 'login'%}">
+        {%csrf_token%}
+        Username:<br>
+        <input type="text" name="username" value=""><br>
+        Password:<br>
+        <input type="password" name="password" value=""><br>
+        <br>
+        <input class="btn btn-primary" type="submit" name="submit" value="login">
+    </form>
+    {%endblock%}
+</div>

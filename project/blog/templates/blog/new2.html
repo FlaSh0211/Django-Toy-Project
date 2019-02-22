@@ -1,0 +1,21 @@
+{%extends "blog/layout.html"%}
+{% load staticfiles %}
+
+{%block content%}
+<div class="container new2">
+        <form  method = "POST" class="forminnew">
+            {%csrf_token%}
+            <table class = "new2table">
+                <tr class="trtitle">
+                    {{form.title}}   <!--{{form.as_table}} -->
+                </tr>  
+                <br><br>
+                <tr class="trbody" name="body">
+                    {{form.body}}
+                </tr>
+                <br><br>
+            </table>
+             <input class="btn btn-primary" type="submit" value="제출하기">
+        </form>
+</div>
+{%endblock%}
